@@ -9,7 +9,9 @@ public class TimeFormat {
 		else {
 			amPm = "PM"; 
 			hours = hours - 12; 
+			if (hours == 0) { hours = 12; }
 		}
+		
 		if (hours < 10) { hours = (hours % 10); } // gets rid of the '0' in case the hour is less then 10 
 		
 		if (minutes < 10) { System.out.println(hours + ":0" + minutes + " " + amPm); }
