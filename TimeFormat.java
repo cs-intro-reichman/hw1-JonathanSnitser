@@ -5,17 +5,22 @@ public class TimeFormat {
 		int minutes = Integer.parseInt("" + args[0].charAt(3) + args[0].charAt(4));
 		String amPm = "AM";
 		
-		if (hours < 12) { amPm = "AM"; }
-		else {
+		if (hours < 12) {
+			 amPm = "AM"; 
+			} else {
 			amPm = "PM"; 
 			hours = hours - 12; 
-			if (hours == 0) { hours = 12; }
+			if (hours == 0) {
+				 hours = 12; 
+				}
 		}
-		
 		if (hours < 10) { hours = (hours % 10); } // gets rid of the '0' in case the hour is less then 10 
 		
-		if (minutes < 10) { System.out.println(hours + ":0" + minutes + " " + amPm); }
-		else { System.out.println(hours + ":" + minutes + " " + amPm); }
+		if (minutes < 10) {
+			 System.out.println(hours + ":0" + minutes + " " + amPm); 
+			} else {
+				 System.out.println(hours + ":" + minutes + " " + amPm); 
+		}
       
 	}
 }
