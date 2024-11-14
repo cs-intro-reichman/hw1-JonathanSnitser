@@ -7,7 +7,11 @@ public class Bill3 {
 		String name3 = args[2];  
 		double bill = Double.parseDouble(args[3]);
 
-		bill = (bill/3)+ 1;
+		if (bill % 3 != 0) {
+			bill = (bill / 3)+ 1;
+		} else {
+			bill = bill / 3;
+		}
 		int billRoundUp = (int) bill;
 		double finalBill = (double) billRoundUp;
 
